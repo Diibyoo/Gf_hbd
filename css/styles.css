@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+h1{
+    color: rgba(255, 48, 48, 0.863);
+    font-weight: 1000;
+    letter-spacing: 2px;
+    text-shadow: rgb(99, 99, 99);
+    border: #555;
+}
+h2{
+    color: dodgerblue;
+}
+p{
+  color: #555;
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 2px
+}
+#header {
+    background-color: rgb(238, 176, 255);
+    margin: 20px;
+    padding: 20px;
+    border: 5px solid rgb(75, 150, 255);
+    border-radius: 10px;
+    animation: bounce 2s infinite;
+}
+
+button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 1000;
+    letter-spacing: 2px;
+    border: 2px solid rgb(253, 183, 195);
+    border-radius: 10px;
+    background-color: rgb(91, 255, 126);
+    color: white;
+    cursor: pointer;
+  }
+  
+button:hover {
+    background-color: rgb(76, 192, 212);
+    transform: scale(1.05); /* Scale up when hovered */
+    transition: transform 0.3s ease; /* Smooth transition */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+} 
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+#gift-icon {
+    font-size: 50px;
+}
+
+.birthday-wish {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid pink;
+    border-radius: 10px;
+    background-color: #fde8e8;
+}
+.hover-effect:hover {
+    transform: scale(1.05); /* Scale up when hovered */
+    transition: transform 0.3s ease; /* Smooth transition */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+/* ... (previous CSS code) ... */
+
+/* Add styles for the pop-up */
+#popup-background {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 999;
+    backdrop-filter: blur(5px); /* Apply blur to the background */
+}
+
+#popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 2px solid pink;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add shadow to the pop-up */
+    z-index: 1000;
+}
+
+#close-popup {
+    position: absolute; /* Position the close button */
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #ff5f5f; /* Close button color */
+    padding: 5px;
+    border-radius: 50%; /* Make it a circle */
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out; /* Add a smooth transition */
+}
+
+#close-popup:hover {
+    background: #ff5f5f; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+}
+
+
+
+.image-container {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100px; /* Adjust the width and height as needed */
+    height: 100px;
+    overflow: hidden;
+
+}
+
+#shaking-image {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+#shaking-image:hover {
+    transform: translateX(-5px); /* Adjust the amount of shake */
+    animation: shake 0.5s ease infinite; /* Add a shake animation */
+}
+
+@keyframes shake {
+    0% { transform: translateX(-5px); }
+    25% { transform: translateX(5px); }
+    50% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+    100% { transform: translateX(-5px); }
+}
